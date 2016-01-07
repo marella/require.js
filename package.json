@@ -1,6 +1,6 @@
 {
   "name": "require.js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Small AMD loader for bundled AMD modules. No dynamic loading or loader plugin support.",
   "main": "require.js",
   "directories": {
