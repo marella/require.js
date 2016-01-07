@@ -1,9 +1,9 @@
 Small AMD loader for bundled AMD modules. No dynamic loading or loader plugin support.
 
-### define(id, deps, factory)
+### define (id, deps, factory)
 
 argument|type
---:|--
+---:|---
 id|string
 deps|array
 factory|function
@@ -25,10 +25,10 @@ define('module1', ['dep1', 'dep2'], function(dep1, dep2) {
 });
 ```
 
-### require(id)
+### require (id)
 
 argument|type
---:|--
+---:|---
 id|string
 
 Synchronously returns the module export for the module ID represented by the `id` argument. Modules and all dependencies must be defined before calling this function as it does not do dynamic loading. [See AMD require()](https://github.com/amdjs/amdjs-api/blob/master/require.md#requirestring-).
@@ -39,12 +39,16 @@ var $ = require('jquery');
 
 ```js
 define('module1', ['dep1'], function(dep1) {
-	var dep2 = require('dep2');
+	var dep2 = require('dep2'); // get dependency
 	// initial setup
 	return {
 		// exports
 	};
 });
+```
+
+```js
+require('main'); // run main module
 ```
 
 ### Usage
